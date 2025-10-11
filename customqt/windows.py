@@ -17,7 +17,7 @@ class WindowsStyler:
     def __init__(
         self,
         window: QWidget,
-        titlebar_hittest: Optional[Callable[[QPoint], Optional[Tuple[bool, int]]]] = None,
+        hittest_callback: Optional[Callable[[QPoint], Optional[Tuple[bool, int]]]] = None,
         border_width: int = 8,
         titlebar_fallback: bool = True,
         titlebar_fallback_height: int = 30,
@@ -34,7 +34,7 @@ class WindowsStyler:
         # Optional custom titlebar hit-test hook
         self._titlebar_hook: Optional[
             Callable[[QPoint], Optional[Tuple[bool, int]]]
-        ] = titlebar_hittest
+        ] = hittest_callback
         self.hwnd: Optional[int] = None
 
         # Window style parameters
