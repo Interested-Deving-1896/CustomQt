@@ -1,1 +1,1 @@
-# TODO Develop for linux!!!
+# TODO: Implement for Linux
